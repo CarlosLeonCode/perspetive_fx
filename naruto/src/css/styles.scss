@@ -150,4 +150,26 @@ body{
             }
         }
     }
+
+    .back-home{
+        position: absolute;
+        z-index: 5;
+        padding: 1rem;
+        border-radius: 50%;
+        margin: 1rem;
+        border: none;
+        background: rgb(124, 124, 124);
+        transition: .2s;
+    
+        .fas{
+            font-size: 1.3rem;
+            color: lightgray;
+        }
+    
+        &:hover{
+            cursor: pointer;
+            box-shadow: 0 0 10px rgb(255, 255, 255);
+            background: rgb(90, 90, 90);
+        }
+    }
 }

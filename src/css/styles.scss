@@ -1,23 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+$gray_light_1: rgb(160, 160, 160);
+$gray_light_2: rgb(247, 247, 247);
+$gray: rgb(163, 163, 163);
+
 body{
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-rows: 5rem 1fr 2rem;
+    grid-template-rows: 5rem 1fr 8rem;
     width: 100vw;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(240, 240, 240);
+    overflow: hidden;
 
     header{
         grid-row: 1/2;   
-        background: red; 
+
+        .title{
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+        }
     }
 
     section{
         grid-row: 2/3;
-        background: lightgray;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+
+        .card{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            // box-shadow: 0 0 10px gray;
+            transition: transform .3s,
+                        box-shadow;
+                        
+            &:before{
+                position: absolute;
+                width: 90%;
+                left: 5%;
+                height: 20rem;
+                content: " ";
+                background: lightgray;
+                top: 0;
+                z-index: -10;
+                border-radius: 6px;
+                transform: translateY(-10px);
+                transition: transform .3s;
+            }
+
+            &:hover{
+                transform: scale(.95);
+                box-shadow:0 0 2px gray;
+
+                &:before{
+                    transform: translateY(0px);
+                }
+            }
+        }
+
+        .covers{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
     }
 
     footer{
         grid-row: 3/4;
-        background: red;
+        background: #ddd;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5rem;
+        box-shadow: inset 0 0 15px $gray;
+
+
+        .stack{
+            border-right: 2px solid white;
+            color: $gray_light_1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .fab{
+                font-size: 3rem;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+
+            .caption{
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+        }
+
+        .credits{
+            color: $gray_light_1;
+            border-right: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .media{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .link-media{
+                    border: 2px solid $gray_light_2;
+                    padding: 0.6rem;
+                    margin-left: 0.5rem;
+                    margin-right: 0.5rem;
+                    border-radius: 50%;
+                    transition: transform .2s;
+
+                    .fab,
+                    .fas{
+                        font-size: 2rem;
+                        color: $gray_light_1;
+                    }
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .caption{
+                text-align: center;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+        }
+
+        .notice{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.6rem;
+            font-size: 0.9rem;
+            text-align: center;
+            color: $gray_light_1;
+            font-weight: bolder;
+        }
     }
 }

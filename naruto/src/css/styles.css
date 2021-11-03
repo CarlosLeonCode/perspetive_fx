@@ -113,5 +113,24 @@ body .wrapper:hover .charac-yiraya {
 body .wrapper:hover .naruto-title {
   transform: rotateY(15deg) rotateX(5deg) translateX(150px);
 }
+body .back-home {
+  position: absolute;
+  z-index: 5;
+  padding: 1rem;
+  border-radius: 50%;
+  margin: 1rem;
+  border: none;
+  background: #7c7c7c;
+  transition: 0.2s;
+}
+body .back-home .fas {
+  font-size: 1.3rem;
+  color: lightgray;
+}
+body .back-home:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px white;
+  background: #5a5a5a;
+}
 
 /*# sourceMappingURL=styles.css.map */
