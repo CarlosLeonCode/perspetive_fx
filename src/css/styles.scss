@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: 5rem 1fr 2rem;
+    width: 100vw;
+    height: 100vh;
+
+    header{
+        grid-row: 1/2;   
+        background: red; 
+    }
+
+    section{
+        grid-row: 2/3;
+        background: lightgray;
+    }
+
+    footer{
+        grid-row: 3/4;
+        background: red;
+    }
+}

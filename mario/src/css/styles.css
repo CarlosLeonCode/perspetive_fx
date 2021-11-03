@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.base-chars-attributes, body .wrapper .char.ghost, body .wrapper .char.mario-kart, body .wrapper .char.mario-fly, body .wrapper .char.mario-lego, body .wrapper .char.horse-fly, body .wrapper .char.mario-friends, body .wrapper .char.mario-ody, body .wrapper .char.hat-mario-ody, body .wrapper .char.mario-yoshi, body .wrapper .char.bob-omb, body .wrapper .char.gomba, body .wrapper .char.toad, body .wrapper .char.mario-normal {
+  position: absolute;
+  transition: 1s;
+}
+
+body {
+  overflow: hidden;
+  background-image: url("../img/wall-general.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+body .wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  perspective: 1000px;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .wrapper .frame {
+  background-image: url("../img/mario-wall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  transition: 1s;
+  box-shadow: 0 0 10px #9d9d9d;
+  border-radius: 6px;
+}
+body .wrapper .char {
+  z-index: 5;
+}
+body .wrapper .char.mario-normal {
+  width: 150px;
+  bottom: 80px;
+  left: 400px;
+}
+body .wrapper .char.toad {
+  width: 150px;
+  bottom: -5px;
+  left: -25px;
+}
+body .wrapper .char.gomba {
+  width: 70px;
+  bottom: 65px;
+  left: 250px;
+}
+body .wrapper .char.bob-omb {
+  width: 70px;
+  bottom: 5px;
+  right: 250px;
+}
+body .wrapper .char.mario-yoshi {
+  width: 150px;
+  left: 5px;
+}
+body .wrapper .char.hat-mario-ody {
+  width: 150px;
+  left: 0;
+  top: 0;
+  z-index: -6 !important;
+}
+body .wrapper .char.mario-ody {
+  width: 150px;
+  right: 5px;
+  bottom: 5px;
+}
+body .wrapper .char.mario-friends {
+  width: 60px;
+  right: 5px;
+  top: 5px;
+  transform: rotateZ(25deg);
+}
+body .wrapper .char.horse-fly {
+  width: 80px;
+  left: 250px;
+  top: 150px;
+}
+body .wrapper .char.mario-lego {
+  width: 400px;
+  left: 220px;
+  z-index: -6 !important;
+}
+body .wrapper .char.mario-fly {
+  width: 200px;
+  right: 0;
+  top: 80px;
+  transform: rotate(25deg);
+  z-index: -6 !important;
+}
+body .wrapper .char.mario-kart {
+  width: 450px;
+  bottom: calc(-100vh - 150px);
+  right: -260px;
+}
+body .wrapper .char.ghost {
+  width: 300px;
+  left: -220px;
+  bottom: calc(-100vh - 150px);
+}
+body .wrapper:hover {
+  cursor: pointer;
+}
+body .wrapper:hover .frame {
+  transform: rotateX(25deg) translateY(100px);
+  box-shadow: 0 15px 25px black;
+}
+body .wrapper:hover .char.hat-mario-ody {
+  transform: translate(-160px, 140px) rotateZ(-35deg);
+}
+body .wrapper:hover .char.mario-lego {
+  transform: translate(0, -120px);
+}
+body .wrapper:hover .char.mario-fly {
+  transform: rotate(10deg) translateX(150px);
+}
+body .wrapper:hover .char.mario-kart {
+  transform: translateY(-100vh);
+}
+body .wrapper:hover .char.mario-ody {
+  transform: scale(0.7);
+}
+body .wrapper:hover .char.gomba {
+  transform: scale(0.7) translateY(20px);
+}
+body .wrapper:hover .char.ghost {
+  transform: translateY(-100vh) rotateZ(-25deg);
+}
+body .wrapper:hover .char.toad {
+  transform: scale(0.7) translateY(20px);
+}
+body .wrapper:hover .char.bob-omb {
+  transform: scale(0.7) translateY(150px);
+}
+body .wrapper:hover .char.mario-normal {
+  transform: scale(1.3);
+}
+body .wrapper:hover .char.mario-yoshi {
+  transform: scale(1.3) rotate(-15deg);
+}
+body .wrapper:hover .char.horse-fly {
+  transform: scale(1.2) rotate(15deg);
+}
+
+/*# sourceMappingURL=styles.css.map */

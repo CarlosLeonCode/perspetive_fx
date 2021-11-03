@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/narutro-wall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    .opacity-layer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .base_properties_characters{
+        position: absolute;
+        transition: 1s;
+    }
+
+    .wrapper{
+        position: absolute;
+        width: 700px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        perspective: 1000px;
+
+        .frame{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/narutro-wall.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-position-x: -100px;
+            overflow: hidden;
+            z-index: -1;
+            transition: 1s;
+            border-radius: 6px; 
+            box-shadow: 0 0 5px black;
+
+            .naruto{
+                @extend .base_properties_characters;
+                width: 200px;
+                right: 20px;
+                bottom: -100px;
+            }
+        }
+    
+
+        .charac{
+
+            &-kakashi{
+                @extend .base_properties_characters;
+                right: 5px;
+                top: -10px;
+                width: 200px;
+                transform: rotateZ(-25deg);
+            }
+
+            &-sakura{
+                @extend .base_properties_characters;
+                width: 200px;
+                left: 0;
+            }
+
+            &-sasuke{
+                @extend .base_properties_characters;
+                width: 350px;
+                left: 0px;
+                top: 250px;
+                transform: scale(0.7) translateX(-50px);
+            }
+
+            &-yiraya{
+                @extend .base_properties_characters;
+                width: 250px;
+                bottom: 5px;
+                left: 250px;
+            }
+            
+            &-uchija_family{
+                @extend .base_properties_characters;
+                width: 350px;
+                top: 0;
+                left: 250px;
+                z-index: -2 !important;
+            }
+        }
+
+        .naruto-title{
+            @extend .base_properties_characters;
+            right: 0;
+            bottom: 5px;
+            width: 150px;
+            z-index: -2 !important;
+        }
+
+        .characters{
+            z-index: 5;
+        }
+
+        &:hover{
+            cursor: pointer;
+
+            .frame{
+                background-position-x: -20px;
+                transform: rotateY(15deg) rotateX(5deg);
+                box-shadow: -5px 5px 15px black;
+
+                
+                .naruto{
+                    transform: scale(.8);
+
+                }
+            }
+
+            .charac{
+
+                &-uchija_family{
+                    top: -180px;
+                    transform: rotateY(15deg) rotateX(5deg);
+
+                }
+
+                &-kakashi{
+                    transform: rotateZ(-15deg) scale(1.5);
+                }
+
+                &-sasuke{
+                    transform: rotateZ(-25deg) scale(1) translateX(-65px);
+                }
+
+                &-sakura{
+                    transform: scale(2);
+                }
+
+                &-yiraya{
+                    transform: scale(.85);
+                }
+            }
+
+            .naruto-title{
+                transform: rotateY(15deg) rotateX(5deg)  translateX(150px);
+            }
+        }
+    }
+}
