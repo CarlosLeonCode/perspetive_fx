@@ -8,10 +8,11 @@ body {
   height: 100vh;
   font-family: "Roboto", sans-serif;
   background-color: #f0f0f0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body header {
   grid-row: 1/2;
+  padding: 0.5rem;
 }
 body header .title {
   text-align: center;
@@ -36,7 +37,7 @@ body section .card:before {
   position: absolute;
   width: 90%;
   left: 5%;
-  height: 20rem;
+  height: 5rem;
   content: " ";
   background: lightgray;
   top: 0;
@@ -65,6 +66,7 @@ body footer {
   grid-template-columns: repeat(3, 1fr);
   padding: 0.5rem;
   box-shadow: inset 0 0 15px #a3a3a3;
+  height: 100%;
 }
 body footer .stack {
   border-right: 2px solid white;
@@ -130,6 +132,48 @@ body footer .notice {
   text-align: center;
   color: #a0a0a0;
   font-weight: bolder;
+}
+
+@media only screen and (max-width: 768px) {
+  body section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body section .card.edc-wrapper {
+    grid-column: 1/3;
+  }
+  body footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body footer .notice {
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    grid-template-rows: 5rem 1fr 25rem;
+  }
+  body header .title {
+    font-size: 1.2rem;
+  }
+  body section {
+    grid-template-columns: 1fr;
+  }
+  body section .card {
+    grid-column: 1/3;
+  }
+  body footer {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+  body footer .notice,
+body footer .stack,
+body footer .credits {
+    grid-column: 1/3;
+  }
+  body footer .credits {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
