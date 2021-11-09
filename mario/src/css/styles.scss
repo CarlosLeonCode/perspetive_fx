@@ -9,6 +9,7 @@
 }
 
 body{
+    position: relative;
     overflow: hidden;
     background-image: url('../img/wall-general.jpg');
     background-repeat: no-repeat;
@@ -18,8 +19,6 @@ body{
 
     .wrapper{
         position: absolute;
-        width: 100vw;
-        height: 100vh;
         perspective: 1000px;
         width: 900px;
         height: 500px;
