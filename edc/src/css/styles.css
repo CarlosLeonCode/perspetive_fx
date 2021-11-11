@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.content {
+  display: block;
+}
+
+.wrapper-background-smaller-device {
+  display: none;
+}
+
 body {
   background-image: url("../img/wall_edc_page.jpg");
   background-size: cover;
@@ -10,6 +18,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body .opacity-mask {
   position: absolute;
@@ -118,6 +127,70 @@ body .opacity-mask {
   cursor: pointer;
   box-shadow: 0 0 10px white;
   background: #5a5a5a;
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .wrapper {
+    width: 400px;
+    height: 200px;
+  }
+  .wrapper .edc_logo {
+    top: 10px;
+    right: 45px;
+    width: 80px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .content {
+    display: none;
+  }
+
+  .wrapper-background-smaller-device {
+    display: block;
+  }
+  .wrapper-background-smaller-device .bg-small-dev {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+    z-index: 1;
+  }
+  .wrapper-background-smaller-device::before {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+  .wrapper-background-smaller-device .author {
+    text-decoration: none;
+    color: rgba(230, 228, 228, 0.541);
+    position: absolute;
+    bottom: 0.5rem;
+    font-size: 0.5rem;
+    text-align: center;
+    width: 100vw;
+    z-index: 3;
+  }
+  .wrapper-background-smaller-device .msm {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+    margin-top: 50vh;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
