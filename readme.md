@@ -13,7 +13,7 @@ You can check in live demo here,
 **It is recommendable use a Laptop or large device to get a best experience, this is temporal**:
 
 
-[website](https://carlosleoncode.github.io/perspetive_fx/)
+[website](https://carlosleoncode.github.io/projct-perspetive-fx/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
